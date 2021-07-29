@@ -1,7 +1,7 @@
 const Mail = require('../../mail')
 const kafka = require('../instance')
 
-const consumer = kafka.consumer({ groupId: 'test-group' })
+const consumer = kafka.consumer({ groupId: 'ms-email-admin' })
 
 async function run() {
 	await consumer.connect()
