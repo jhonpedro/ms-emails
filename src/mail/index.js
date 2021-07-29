@@ -41,6 +41,21 @@ class Mail {
 		console.log('Emails finished')
 	}
 
+	/**
+	 * Send email for one mail provided.
+	 * The templateName is the relative path from view folder perspective
+	 * - view
+	 *    - emails
+	 *      - admin_mail.edge
+	 *
+	 * templateName: 'emails/admin_mail'
+	 *
+	 * @param {Object} params
+	 * @param {String} params.to
+	 * @param {String} params.subject
+	 * @param {String} params.templateName
+	 * @param {Object} params.templateData
+	 */
 	async execute({ to, subject, templateName, templateData }) {
 		try {
 			const html = await edge.render(templateName, templateData)
