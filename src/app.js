@@ -1,8 +1,6 @@
 const Express = require('express')
 const kafkaConsumers = require('./kafka/consumers/')
 
-require('dotenv').config()
-
 class App {
 	constructor() {
 		this.app = Express()
